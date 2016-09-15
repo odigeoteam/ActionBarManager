@@ -9,22 +9,33 @@
 import Foundation
 import TableViewKit
 
+public typealias DirectionButtonPressedCallback = (IndexPath, Direction) -> ()
+public typealias DoneButtonPressedCallback = () -> ()
+
 open class ActionBarManager: ActionBarDelegate {
     
     let manager: TableViewManager
+    
+    public var onDirectionButtonPressed: DirectionButtonPressedCallback?
+    public var onDoneButtonPressedCallback: DoneButtonPressedCallback?
     
     public init(manager: TableViewManager) {
         self.manager = manager
     }
     
-    public func actionBar(_ actionBar: ActionBar, direction: Direction) {
-        guard let indexPath = indexPathForResponder(forDirection: direction) else { return }
+    public func doneButtonPressed(actionBar: ActionBar, barButtonItem: UIBarButtonItem) {
+        onDoneButtonPressedCallback?()
+    }
+    
+    public func directionButtonPressed(actionBar: ActionBar, direction: Direction) {
+        
+        guard let indexPath = indexPathForResponder(forDirection: direction) as IndexPath? else { return }
         
         manager.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
         manager.tableView.cellForRow(at: indexPath)?.becomeFirstResponder()
+        
+        onDirectionButtonPressed?(indexPath, direction)
     }
-    
-    public func actionBar(_ actionBar: ActionBar, doneButtonPressed doneButtonItem: UIBarButtonItem) { }
     
     fileprivate func indexPathForResponder(forDirection direction: Direction) -> IndexPath? {
         
