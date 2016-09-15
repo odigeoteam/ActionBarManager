@@ -16,8 +16,8 @@ public enum Direction {
 
 public protocol ActionBarDelegate {
 
-    func actionBar(_ actionBar: ActionBar, direction: Direction)
-    func actionBar(_ actionBar: ActionBar, doneButtonPressed doneButtonItem: UIBarButtonItem)
+    func directionButtonPressed(actionBar: ActionBar, direction: Direction)
+    func doneButtonPressed(actionBar: ActionBar, barButtonItem: UIBarButtonItem)
 }
 
 open class ActionBar: UIToolbar {
@@ -26,13 +26,12 @@ open class ActionBar: UIToolbar {
     public var actionBarDelegate: ActionBarDelegate!
 
     public init(delegate: ActionBarDelegate) {
-
         super.init(frame: CGRect.zero)
 
         sizeToFit()
 
         actionBarDelegate = delegate
-
+        
         setup()
     }
 
@@ -54,15 +53,15 @@ open class ActionBar: UIToolbar {
         items = [previousButtonItem, spacer, nextButtonItem, flexible, doneButton]
     }
 
-    @objc func handleActionBarDone(_ item: UIBarButtonItem) {
-        actionBarDelegate.actionBar(self, doneButtonPressed: item)
+    @objc func handleActionBarDone(item: UIBarButtonItem) {
+        actionBarDelegate.doneButtonPressed(actionBar: self, barButtonItem: item)
     }
 
-    @objc func previousHandler(_ sender: UIBarButtonItem) {
-        actionBarDelegate.actionBar(self, direction: .previous)
+    @objc func previousHandler(sender: UIBarButtonItem) {
+        actionBarDelegate.directionButtonPressed(actionBar: self, direction: .previous)
     }
 
-    @objc func nextHandler(_ sender: UIBarButtonItem) {
-        actionBarDelegate.actionBar(self, direction: .next)
+    @objc func nextHandler(sender: UIBarButtonItem) {
+        actionBarDelegate.directionButtonPressed(actionBar: self, direction: .next)
     }
 }
