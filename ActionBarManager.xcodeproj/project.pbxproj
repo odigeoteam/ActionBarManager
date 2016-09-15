@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2564E6311D88524500A9DC3E /* ActionBarManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2564E6271D88524500A9DC3E /* ActionBarManager.framework */; };
-		2564E6361D88524500A9DC3E /* ActionBarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564E6351D88524500A9DC3E /* ActionBarManagerTests.swift */; };
+		2564E6361D88524500A9DC3E /* ActionBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564E6351D88524500A9DC3E /* ActionBarTests.swift */; };
 		2564E6381D88524500A9DC3E /* ActionBarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2564E62A1D88524500A9DC3E /* ActionBarManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2564E6431D88526D00A9DC3E /* ActionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564E6411D88526D00A9DC3E /* ActionBar.swift */; };
 		2564E6441D88526D00A9DC3E /* ActionBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564E6421D88526D00A9DC3E /* ActionBarManager.swift */; };
@@ -31,7 +31,7 @@
 		2564E62A1D88524500A9DC3E /* ActionBarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionBarManager.h; sourceTree = "<group>"; };
 		2564E62B1D88524500A9DC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2564E6301D88524500A9DC3E /* ActionBarManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionBarManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2564E6351D88524500A9DC3E /* ActionBarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarManagerTests.swift; sourceTree = "<group>"; };
+		2564E6351D88524500A9DC3E /* ActionBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarTests.swift; sourceTree = "<group>"; };
 		2564E6371D88524500A9DC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2564E6411D88526D00A9DC3E /* ActionBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionBar.swift; sourceTree = "<group>"; };
 		2564E6421D88526D00A9DC3E /* ActionBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionBarManager.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		2564E6341D88524500A9DC3E /* ActionBarManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2564E6351D88524500A9DC3E /* ActionBarManagerTests.swift */,
+				2564E6351D88524500A9DC3E /* ActionBarTests.swift */,
 				2564E6371D88524500A9DC3E /* Info.plist */,
 			);
 			path = ActionBarManagerTests;
@@ -327,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2564E6361D88524500A9DC3E /* ActionBarManagerTests.swift in Sources */,
+				2564E6361D88524500A9DC3E /* ActionBarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
