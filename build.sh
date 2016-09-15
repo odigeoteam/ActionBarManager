@@ -1,3 +1,5 @@
+pod install
+
 set -o pipefail &&
 time xcodebuild clean test \
     -workspace ActionBarManager.xcworkspace \
