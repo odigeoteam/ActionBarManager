@@ -64,4 +64,15 @@ class ActionBarTests: XCTestCase {
         XCTAssertNotNil(delegate.directionButtonPressed)
         XCTAssert(delegate.directionButtonPressed! == .next)
     }
+    
+    func testActionBarDone() {
+        
+        let done = actionbar.items?.last
+        XCTAssertNotNil(done)
+        
+        actionbar.handleActionBarDone(item: done!)
+        
+        XCTAssertNotNil(delegate.doneButtonPressed)
+        XCTAssert(delegate.doneButtonPressed! == true)
+    }
 }
