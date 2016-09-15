@@ -486,7 +486,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D32B29D95E7E61AC3718F4CA /* Pods-ActionBarManagerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = ActionBarManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edreams.ActionBarManagerTests;
@@ -499,7 +499,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A4A3255453C7EBC02A93390 /* Pods-ActionBarManagerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = ActionBarManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edreams.ActionBarManagerTests;
