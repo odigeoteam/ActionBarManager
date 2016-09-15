@@ -22,10 +22,10 @@ public protocol ActionBarDelegate {
 
 open class ActionBar: UIToolbar {
 
-    var navigationControl: UISegmentedControl!
-    var actionBarDelegate: ActionBarDelegate!
+    public var navigationControl: UISegmentedControl!
+    public var actionBarDelegate: ActionBarDelegate!
 
-    init(delegate: ActionBarDelegate) {
+    public init(delegate: ActionBarDelegate) {
 
         super.init(frame: CGRect.zero)
 

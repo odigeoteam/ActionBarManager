@@ -9,11 +9,11 @@
 import Foundation
 import TableViewKit
 
-class ActionBarManager: ActionBarDelegate {
+open class ActionBarManager: ActionBarDelegate {
     
     let manager: TableViewManager
     
-    init(manager: TableViewManager) {
+    public init(manager: TableViewManager) {
         self.manager = manager
     }
     

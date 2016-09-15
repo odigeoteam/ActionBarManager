@@ -11,4 +11,6 @@ Pod::Spec.new do |s|
   s.source_files  			= "ActionBarManager/**/*.swift"
   s.framework  				= "Foundation"
   s.requires_arc 			= true
+  
+  s.dependency 				'TableViewKit'
 end
