@@ -23,11 +23,10 @@ class ActionBarObserver: ActionBarDelegate {
     }
 }
 
-class ActionBarManagerTests: XCTestCase {
+class ActionBarTests: XCTestCase {
     
     var delegate: ActionBarObserver!
     var actionbar: ActionBar!
-    var actionbarManager: ActionBarManager!
     
     override func setUp() {
         super.setUp()
